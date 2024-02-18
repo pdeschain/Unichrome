@@ -1,34 +1,30 @@
-# Unichrome
+# Unichrome 🚀
 
 **Unichrome** is an embeddable vector storage for Unity.
 
-# Features
+# Features 🌟
 
-- **Embeddable**: Unichrome is designed to be embedded in your Unity project.
-- **In-Memory Storage**: Unichrome supports in-memory storage.
-- **Local Persistence**: Unichrome supports local persistence using ultra-fast MemoryPack.
-- Embeddings:
-  - **Sentis Integration**: Unichrome is designed to work with Unity Sentis for generation of embeddings.
-  - **Local: HuggingFace Sharp-Transformers**: Unichrome is designed to work with HuggingFace Sharp-Transformers for generation of embeddings (using SentenceTransformer).
-  - **API: OpenAI**: Unichrome supports OpenAI API for generation of embeddings. It would require an API key for OpenAI and additional settings for Azure OpenAI API.
+- **Embeddable**: Seamlessly integrates with your Unity project 🛠️.
+- **In-Memory Storage**: Offers swift in-memory data handling ⚡.
+- **Local Persistence**: Boasts local data saving with the speedy MemoryPack 📦.
+- **Embeddings**:
+  - **Sentis Integration**: Perfectly pairs with Unity Sentis for embedding creation 🤝.
+  - **Local: HuggingFace Sharp-Transformers**: Utilizes HuggingFace Sharp-Transformers for local embeddings (via SentenceTransformer) 🧠.
+  - **(coming soon) API: OpenAI**: Connects with OpenAI API for embedding generation (needs API key & Azure settings) 🔑.
 
+# Dependencies 📚
 
-# Dependency
+Props to:
+ - [HNSW by Microsoft & Curiosity AI](https://github.com/curiosity-ai/hnsw-sharp) - top-notch work! 👏
+ - [Sentis ML runtime by Unity Technologies](https://docs.unity3d.com/Packages/com.unity.sentis@1.2/manual/index.html) for local model inference 🧪
+ - [MemoryPack](https://github.com/Cysharp/MemoryPack) for our primary storage backend 🗃️
+ - [HuggingFace Sharp-Transformers](https://github.com/huggingface/sharp-transformers) for their SentenceTransformers embeddings 💬
 
-- [Unity Sentis][sentis-link]
-- [HuggingFace Transformers][huggingface-transformers-link]
-- [MemoryPack][memorypack-link]
+# Installation Guide 🛠️
 
-[sentis-link]: https://docs.unity3d.com/Packages/com.unity.sentis@1.2/manual/index.html
-[memorypack-link]: https://github.com/Cysharp/MemoryPack
-[huggingface-transformers-link]: https://github.com/huggingface/sharp-transformers
+Unity's `package.json` doesn't play nice with git dependencies. You'll need to manually tweak your manifest file.
 
-# How to Install
-
-This project requires several git-based dependencies in the `package.json` which Unity does not support.
-As such you will need to add them manually to your project's manifest file.
-
-### Install via Manifest
+### Manifest Installation
 
 ```json
 {
