@@ -1,0 +1,22 @@
+{
+  "name": "com.magicforge.unichrome",
+  "displayName": "Unichrome",
+  "version": "0.0.1",
+  "unity": "2021.3",
+  "description": "Embeddable vector storage for Unity",
+  "keywords": ["Semantic Search", "Vector Database", "Embeddings", "Machine Learning", "AI"],
+  "license": "MIT",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "dependencies": {
+    "com.unity.sentis": "1.2.0-exp.2"
+  },
+  "samples": [
+    {
+      "displayName": "Samples",
+      "description": "Varied samples for Unichrome",
+      "path": "Samples~/SamplesGeneral"
+    }
+  ]
+}
