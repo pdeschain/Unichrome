@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Unichrome.Embeddings.SentenceTransformers;
+using Unichrome.Embeddings.HuggingFace;
 
 namespace Unichrome.Sample
 {
@@ -9,7 +9,7 @@ namespace Unichrome.Sample
         public async ValueTask Example()
         {
             //set up SentenceTransformers embeddings
-            var embeddings = new SentenceTransformerEmbeddings();
+            var embeddings = new HuggingFaceSentenceTransformerEmbeddings();
 
             //set up UnichromeDB in-memory, for easy prototyping. Can add persistence easily by specifying a path and calling Persist()!
             var db = new UnichromeDB(embeddings);
