@@ -228,6 +228,8 @@ namespace Unichrome
             world = new SmallWorld<UnichromeDocument, float>(CosineDistanceNonOptimized,
                 DefaultRandomGenerator.Instance,
                 new Parameters());
+            
+            world.AddItems(Storage.GetDocuments());
         }
 
         /// <summary>
