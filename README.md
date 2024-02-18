@@ -29,7 +29,7 @@ Unity's `package.json` doesn't play nice with git dependencies. You'll need to m
 ```json
 {
   "dependencies": {
-    "com.magicforge.unichrome": "",
+    "com.magicforge.unichrome": "https://github.com/pdeschain/Unichrome/tree/main/Packages/Unichrome.git",
     "com.huggingface.transformers": "https://github.com/huggingface/sharp-transformers.git"
   }
 }
