@@ -94,17 +94,17 @@ namespace Unichrome
                         world = SmallWorld<UnichromeDocument, float>.DeserializeGraph(
                             File.ReadAllBytes(hnswFilePath),
                             Storage.GetDocuments(),
-                            CosineDistanceNonOptimized,
+                            CosineDistanceSIMD,
                             DefaultRandomGenerator.Instance
                         );
                     }
                 }
                 else
                 {
-                    var parameters = new Parameters();
-                    world = new SmallWorld<UnichromeDocument, float>(CosineDistanceNonOptimized,
+                    world = new SmallWorld<UnichromeDocument, float>(CosineDistanceSIMD,
                         DefaultRandomGenerator.Instance,
-                        parameters);
+                        new Parameters());
+                    world.AddItems(Storage.GetDocuments());
 
                     Persist();
                 }
@@ -201,6 +201,12 @@ namespace Unichrome
         public void DeleteDocument(int id)
         {
             Storage.DeleteDocument(id);
+            
+            world = new SmallWorld<UnichromeDocument, float>(CosineDistanceNonOptimized,
+                DefaultRandomGenerator.Instance,
+                new Parameters());
+
+            world.AddItems(Storage.GetDocuments());
         }
         
         /// <summary>
@@ -218,6 +224,10 @@ namespace Unichrome
             }
             
             Storage.UpdateDocument(existingDocument);
+            
+            world = new SmallWorld<UnichromeDocument, float>(CosineDistanceNonOptimized,
+                DefaultRandomGenerator.Instance,
+                new Parameters());
         }
 
         /// <summary>
